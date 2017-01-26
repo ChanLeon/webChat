@@ -1,0 +1,118 @@
+/* 该文件用于生产环境，不要轻易修改该文件，请修改development.json，修改相应的端口或配置*/
+{
+    "express": {
+        "view engine": "ejs",
+        "view cache": true,
+        "views": "path:./site/views"
+    },
+    "log4jsConfig": "path:./config/log4js_dev.json",
+
+     "mongoTest": {
+        "host": "192.168.33.10",
+        "database": "moviedata" //修改
+    },
+
+    "view engines": {
+        "ejs": {
+            "module": "ejs",
+            "renderer": "renderFile"
+        }
+    },
+
+    "middleware": {
+        "static": {
+            "module": {
+                "arguments": ["path:./public"]
+            }
+        },
+
+        "favicon": {
+            "module": {
+                "arguments": ["path:./public/favicon.ico"]
+            }
+        },
+
+        "logger": {
+            "enabled": false
+        },
+
+        "cookieParser": {
+            "module": {
+                "arguments": ["6de5191ab3c401bcb266dff913"]
+            }
+        },
+
+        "session": {
+            "enabled": true,
+            "priority": 100,
+            "module": {
+                "name": "kraken-middleware/lib/redis-session",
+                "arguments": [{
+                    "secret": "6de5191ab3c401bcb266dff913",
+                    "cookie": {
+                        "path": "/",
+                        "httpOnly": true,
+                        "maxAge": 1800000
+                    },
+                    "resave": true,
+                    "saveUninitialized": true
+                }, {
+                    "host": "redisDb",
+                    "port": 6379
+                }]
+            }
+        },
+
+        "appsec": {
+            "enabled": true,
+            "priority": 110,
+            "module": {
+                "name": "lusca",
+                "arguments": [{
+                    "csrf": true,
+                    "xframe": "SAMEORIGIN",
+                    "p3p": false,
+                    "csp": false
+                }]
+            }
+        },
+
+
+        "switchOption": {
+            "enabled": true,
+            "priority": 119,
+            "module": {
+                "name": "kraken-middleware/lib/switch",
+                "arguments": [{}]
+            }
+        },
+
+        "router": {
+            "enabled": true,
+            "priority": 120,
+            "module": {
+                "arguments": [{
+                    "directory": "path:./controllers"
+                }]
+            }
+        },
+
+        "fileNotFound": {
+            "enabled": true,
+            "priority": 130,
+            "module": {
+                "name": "kraken-js/middleware/404",
+                "arguments": ["error/404"]
+            }
+        },
+
+        "serverError": {
+            "enabled": true,
+            "priority": 140,
+            "module": {
+                "name": "kraken-js/middleware/500",
+                "arguments": ["error/500"]
+            }
+        }
+    }
+}

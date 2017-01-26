@@ -1,0 +1,120 @@
+<!doctype html>
+ <html>
+ <head>
+ 	<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="webkit" name="renderer">
+<title>多聊</title>
+<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.1.0/css/font-awesome.min.css">
+<link href="http://127.0.0.1:3600/static/mongodata/index_53206d1.css" rel="stylesheet">
+<link href="http://127.0.0.1:3600/static/common/head_f875a11.css" rel="stylesheet">
+<link href="http://127.0.0.1:3600/static/common/common_d41d8cd.css" rel="stylesheet">
+<link href="http://127.0.0.1:3600/static/common/foot_dcb9e42.css" rel="stylesheet">
+
+
+  <!--
+       @require "mongodata/static/index.css"
+       @require "mongodata/static/reg_login.js"
+   -->
+
+ </head>
+ <body>
+      <!--
+       @require "common/static/head.css"
+       @require "common/static/common.css"
+    -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    		<div class="container">
+    			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+    			<a class="navbar-brand" href="javascript:void(0)">多聊</a>
+    			<div class="nav-collapsed btn-toolbar" role="toolbar">
+    				<ul class="nav navbar-nav">
+    					<li <% if(locals.home == 'home'){%> class="active" <%}%>><a data-href href="/">首页</a></li>
+                        <li <% if(locals.reg == 'reg'){%> class="active" <%}%>><a data-href href="/mongodata/reg">注册</a></li>
+                        <li <% if(locals.login == 'login'){%> class="active" <%}%>><a data-href href="/mongodata/login">登录</a></li>
+                        <li <% if(locals.index == 'index'){%> class="active" <%}%>><a data-href href="/mongodata/index">聊天室</a></li>
+                    </ul>
+                    <% if(locals.username){%>
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a data-href href="javascript:void(0)">多聊欢迎您！！！
+                            <%= username.name%> 先生/女士</a></li>
+                        <li><a data-href href="javascript:void(0)">设置</a></li>
+                        <li><a data-href href="/mongodata/logout">退出</a></li>
+                    </ul>
+                    <%}%>
+                </div>
+            </div>
+</nav>
+
+
+
+<div class="all" id = "all">
+	<div id="header">
+		<span class="title" id="title"></span>
+		<span id="status"></span>
+	</div>
+	<div id="msg">
+		
+	</div>
+
+	<div id="content">
+		<div id="plugin">
+			<input type="color" name="user_color" id="color" placeHolder="#000" title="font color" />
+			<input type="button" name="emoji" id="emoji" value="" title="emoji"/>
+			<label for="sendImage" class="imageLable">
+                <input type="button" name="image" id="imageload" value="图片"  />
+                <input id="sendImage" type="file" value="图片"/>
+            </label>
+			<input type="button" name="clear" id="clear" value="清屏" title="clear screen"/>
+		</div>
+		<div id="sendmsg">
+            <textarea id="messageInput" placeHolder="请输入信息"></textarea>
+            <input type="button" id="sendBtn" value="发送"/>
+		</div>
+		<div id="emojiWrapper">
+        </div>
+	</div>
+</div>
+
+<div id="loginpage">
+	<p id="info">正在连接到服务器...</p>
+    <div id="nickWrapper">
+        <input type="text" placeHolder="请注册您的昵称" id="nicknameInput" />
+        <input type="button" id="loginBtn" value="注册" />
+    </div>
+</div>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="http://127.0.0.1:3600/static/mongodata/index_63388b7.js"></script>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46794744-7', 'hichat.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+  <!-- 
+	@require "common/static/foot.css"
+ -->
+<div class="col-xs-12 section site-info">
+    <p class="text-center">
+        <small>© 2016 陈立豪 版权所有. 粤ICP备 140xxxxx 号</small>
+    </p>
+</div>
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js" type="text/javascript"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="http://127.0.0.1:3600/static/mongodata/reg_login_0b075c8.js"></script>
+
+ </body>
+ </html>
+

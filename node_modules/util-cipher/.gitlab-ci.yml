@@ -1,0 +1,25 @@
+image: docker.umiit.cn:5043/node:0.12.7
+
+stages:
+  - test
+  - deploy
+
+run_test:
+  stage: test
+  tags:
+    - docker
+  script:
+    - npm install --unsafe-perm
+    - grunt default
+  cache:
+    paths:
+    - node_modules/
+
+run_deploy:
+  stage: deploy
+  tags:
+    - docker
+  only:
+    - tags
+  script:
+    - npm publish

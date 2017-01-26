@@ -1,0 +1,33 @@
+    <!--
+       @require "../static/head.css"
+       @require "../static/common.css"
+    -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    		<div class="container">
+    			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+    			<a class="navbar-brand" href="javascript:void(0)">多聊</a>
+    			<div class="nav-collapsed btn-toolbar" role="toolbar">
+    				<ul class="nav navbar-nav">
+    					<li <% if(locals.home == 'home'){%> class="active" <%}%>><a data-href href="/">首页</a></li>
+                        <li <% if(locals.reg == 'reg'){%> class="active" <%}%>><a data-href href="/mongodata/reg">注册</a></li>
+                        <li <% if(locals.login == 'login'){%> class="active" <%}%>><a data-href href="/mongodata/login">登录</a></li>
+                        <li <% if(locals.index == 'index'){%> class="active" <%}%>><a data-href href="/mongodata/index">聊天室</a></li>
+                    </ul>
+                    <% if(locals.username){%>
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a data-href href="javascript:void(0)">多聊欢迎您！！！
+                            <%= username.name%> 先生/女士</a></li>
+                        <li><a data-href href="javascript:void(0)">设置</a></li>
+                        <li><a data-href href="/mongodata/logout">退出</a></li>
+                    </ul>
+                    <%}%>
+                </div>
+            </div>
+</nav>
+
+

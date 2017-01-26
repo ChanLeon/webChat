@@ -1,0 +1,64 @@
+<!doctype html>
+ <html>
+ <head>
+ 	<!--inline[../../common/page/head.ejs]-->
+  <!--
+       @require "../static/index.css"
+       @require "../static/reg_login.js"
+   -->
+
+ </head>
+ <body>
+  <!--inline[../../common/page/header.ejs]-->
+<div class="all" id = "all">
+	<div id="header">
+		<span class="title" id="title"></span>
+		<span id="status"></span>
+	</div>
+	<div id="msg">
+		
+	</div>
+
+	<div id="content">
+		<div id="plugin">
+			<input type="color" name="user_color" id="color" placeHolder="#000" title="font color" />
+			<input type="button" name="emoji" id="emoji" value="" title="emoji"/>
+			<label for="sendImage" class="imageLable">
+                <input type="button" name="image" id="imageload" value="图片"  />
+                <input id="sendImage" type="file" value="图片"/>
+            </label>
+			<input type="button" name="clear" id="clear" value="清屏" title="clear screen"/>
+		</div>
+		<div id="sendmsg">
+            <textarea id="messageInput" placeHolder="请输入信息"></textarea>
+            <input type="button" id="sendBtn" value="发送"/>
+		</div>
+		<div id="emojiWrapper">
+        </div>
+	</div>
+</div>
+
+<div id="loginpage">
+	<p id="info">正在连接到服务器...</p>
+    <div id="nickWrapper">
+        <input type="text" placeHolder="请注册您的昵称" id="nicknameInput" />
+        <input type="button" id="loginBtn" value="注册" />
+    </div>
+</div>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="../static/index.js"></script>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46794744-7', 'hichat.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+  <!--inline[../../common/page/footer.ejs]-->
+  <!--inline[../../common/page/foot.ejs]-->
+ </body>
+ </html>
+

@@ -1,0 +1,105 @@
+{
+    "res": {
+        "common/static/common.css": {
+            "uri": "http://127.0.0.1:3600/static/common/common_d41d8cd.css",
+            "type": "css"
+        },
+        "common/static/foot.css": {
+            "uri": "http://127.0.0.1:3600/static/common/foot_dcb9e42.css",
+            "type": "css"
+        },
+        "common/static/head.css": {
+            "uri": "http://127.0.0.1:3600/static/common/head_f875a11.css",
+            "type": "css"
+        },
+        "common/static/header.js": {
+            "uri": "http://127.0.0.1:3600/static/common/header_1bed134.js",
+            "type": "js"
+        },
+        "error/page/404.ejs": {
+            "uri": "/views/error/404.ejs",
+            "type": "ejs"
+        },
+        "error/page/500.ejs": {
+            "uri": "/views/error/500.ejs",
+            "type": "ejs"
+        },
+        "mongodata/page/checkLog.ejs": {
+            "uri": "/views/mongodata/checkLog.ejs",
+            "type": "ejs",
+            "deps": [
+                "mongodata/static/index.css"
+            ]
+        },
+        "mongodata/page/home.ejs": {
+            "uri": "/views/mongodata/home.ejs",
+            "type": "ejs",
+            "deps": [
+                "mongodata/static/index.css",
+                "common/static/head.css",
+                "common/static/common.css",
+                "common/static/foot.css"
+            ]
+        },
+        "mongodata/page/index.ejs": {
+            "uri": "/views/mongodata/index.ejs",
+            "type": "ejs",
+            "deps": [
+                "mongodata/static/index.css",
+                "mongodata/static/reg_login.js",
+                "common/static/head.css",
+                "common/static/common.css",
+                "common/static/foot.css"
+            ]
+        },
+        "mongodata/page/login.ejs": {
+            "uri": "/views/mongodata/login.ejs",
+            "type": "ejs",
+            "deps": [
+                "mongodata/static/index.css",
+                "mongodata/static/reg_login.js",
+                "common/static/head.css",
+                "common/static/common.css",
+                "common/static/foot.css"
+            ]
+        },
+        "mongodata/page/reg.ejs": {
+            "uri": "/views/mongodata/reg.ejs",
+            "type": "ejs",
+            "deps": [
+                "mongodata/static/index.css",
+                "mongodata/static/reg_login.js",
+                "common/static/head.css",
+                "common/static/common.css",
+                "common/static/foot.css"
+            ]
+        },
+        "mongodata/page/result.ejs": {
+            "uri": "/views/mongodata/result.ejs",
+            "type": "ejs",
+            "deps": [
+                "mongodata/static/index.css"
+            ]
+        },
+        "mongodata/static/header.js": {
+            "uri": "http://127.0.0.1:3600/static/mongodata/header_1bed134.js",
+            "type": "js"
+        },
+        "mongodata/static/index.css": {
+            "uri": "http://127.0.0.1:3600/static/mongodata/index_53206d1.css",
+            "type": "css"
+        },
+        "mongodata/static/index.js": {
+            "uri": "http://127.0.0.1:3600/static/mongodata/index_63388b7.js",
+            "type": "js",
+            "deps": [
+                "mongodata/static/index.css"
+            ]
+        },
+        "mongodata/static/reg_login.js": {
+            "uri": "http://127.0.0.1:3600/static/mongodata/reg_login_0b075c8.js",
+            "type": "js"
+        }
+    },
+    "pkg": {}
+}

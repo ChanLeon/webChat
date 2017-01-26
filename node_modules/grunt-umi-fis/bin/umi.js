@@ -1,0 +1,1 @@
+require('../lib/umi').cli.run(process.argv);

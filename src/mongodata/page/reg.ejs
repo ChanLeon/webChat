@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--inline[../../common/page/head.ejs]-->
+        <!-- 此处引用内部的js和css 使用require方式 -->
+        <!--
+           @require "../static/index.css"
+           @require "../static/reg_login.js"
+         -->
+    </head>
+    <body>
+        <!--inline[../../common/page/header.ejs]-->
+    	    <div class="container form_reg" id="reg">
+                <form action="/mongodata/reg" method="post" class="form-horizontal">
+                	<div class="form-group">
+                		<label class="col-xs-3 col-sm-3 col-md-3 control-label username">用户名：</label>
+                		<div class="col-xs-6 col-sm-6 col-md-6">
+                			<input type="text" placeholder="用户名" class="form-control" id="username" name="username">
+                		</div>
+                        <span class="username_right" id="username_right">*请输入正确的用户名</span>
+                	</div>
+                	<div class="form-group">
+                		<label class="col-xs-3 col-sm-3 col-md-3 control-label psw">密码：</label>
+                		<div class="col-xs-6 col-sm-6 col-md-6">
+                			<input type="password" placeholder="密码" class="form-control" id="psw" name="password">
+                		</div>
+                         <span class="psw_right" id="psw_right">*请输入正确的密码</span>
+                	</div>
+                	<div class="form-group">
+                		<label class="col-xs-3 col-sm-3 col-md-3 control-label pswagin">确认密码：</label>
+                		<div class="col-xs-6 col-sm-6 col-md-6">
+                			<input type="password" placeholder="确认密码" class="form-control" id="pswagain" name="password-repeat">
+                		</div>
+                         <span class="pswagain_right" id="pswagain_right">*密码不一致，请重新输入</span>
+                	</div>
+                	<div class="form-group">                    	
+                		<div class="col-xs-offset-3 col-xs-6 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6">
+                            <input type="hidden" name="_csrf" value="<%-locals._csrf%>">
+                			<input type="submit" class="btn btn-primary" id="reg"  value="注册"/>
+                		</div>
+                	</div>
+                </form>
+                <p style="color:#f00;text-align: center;font-weight: bold;"><%-locals.user%></p>
+            </div>
+        <!--inline[../../common/page/footer.ejs]-->
+        <!--inline[../../common/page/foot.ejs]-->
+    </body>
+</html>

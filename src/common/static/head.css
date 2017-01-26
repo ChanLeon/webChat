@@ -1,0 +1,20 @@
+
+.am-nav-list li{
+	display: inline-block;	
+	float: left;
+}
+
+.am-nav-list li a{
+	background: #000;
+	padding: 0 10px;
+	text-align: center;
+	color: #ccc;
+	width: 120px;
+	height: 44px;	
+	  display: block;
+	line-height: 44px;
+}
+.am-nav-list li a:hover,.am-nav-list li a.active,.am-nav-list li a.visited{
+	background: #fff;
+	text-decoration: none;
+}
